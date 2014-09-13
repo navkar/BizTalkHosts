@@ -1,0 +1,8 @@
+Host Instance Creation and Adapter Configuration Tool for BizTalk
+
+Written by: Stephen W. Thomas
+Contact: swthomas@biztalkgurus.com
+Blog: http://www.biztalkgurus.com/blogs/biztalk/
+Website: http://www.biztalkgurus.com
+
+Sample is provided AS-IS.  With no warranties of any kind.  Run at your own risk.

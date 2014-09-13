@@ -1,0 +1,98 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<BizTalkHostConfig Version="1.0" defaultHost="BizTalkServerApplication" defaultIsoHost="BizTalkServerIsolatedHost">
+	<MakeHosts>
+		<!-- 
+		Basic Sample to create a HOST
+			<Host>
+			<HostName>MyTestHost</HostName>
+		Host Type: Isolated or InProcess
+			<Type>InProcess</Type>
+			<NTGroup>BizTalk Application Users</NTGroup>
+			<AuthTrusted>false</AuthTrusted>
+		Action: true to install or false to skip
+			<InstallServers Action="false" />
+		Action: true to set adapters or false to skip
+			<SetAdapters Action="false" />
+		AdapterName Type: Receive or Send
+		</Host>
+		Detailed sample to create a host, install it, and set up an adapter to use the new host
+		<Host>
+			<HostName>MyTestHost123</HostName>
+		Host Type: Isolated or InProcess
+			<Type>InProcess</Type>
+			<NTGroup>BizTalk Application Users</NTGroup>
+			<AuthTrusted>false</AuthTrusted>
+		Action: true to install or false to skip
+			<InstallServers Action="true">
+				<Server>
+		Start: true to start host or false to not
+					<ServerName Start="true">LPT154</ServerName>
+					<UserName>SomeUserSomePassword</UserName>
+		Prompt: true to get a pop up to end password or false to enter it here
+					<Password Prompt="false">SomeUserSomePassword</Password>
+				</Server>
+			</InstallServers>
+		Action: true to set adapters or false to skip
+			<SetAdapters Action="true">
+				<Adapter>
+		Type: Receive or Send
+					<AdapterName Type="Receive">File</AdapterName>
+				</Adapter>
+			</SetAdapters>
+		</Host>
+		-->
+		<!-- Process Host -->
+		<Host>
+			<HostName>ProcessHost</HostName>
+			<Type>InProcess</Type>
+			<NTGroup>BizTalk Application Users</NTGroup>
+			<AuthTrusted>false</AuthTrusted>
+			<InstallServers Action="true">
+				<Server>
+					<ServerName Start="false">SERVER_NAME</ServerName>
+					<UserName>SomeUserSomePassword</UserName>
+					<Password Prompt="true">SomeUserSomePassword</Password>
+				</Server>
+			</InstallServers>
+			<SetAdapters Action="false" />
+		</Host>
+		<!-- Receive Host -->
+		<Host>
+			<HostName>RecCommerceCatalog</HostName>
+			<Type>InProcess</Type>
+			<NTGroup>BizTalk Application Users</NTGroup>
+			<AuthTrusted>false</AuthTrusted>
+			<InstallServers Action="true">
+				<Server>
+					<ServerName Start="false">SERVER_NAME</ServerName>
+					<UserName>SomeUserSomePassword</UserName>
+					<Password Prompt="true">SomeUserSomePassword</Password>
+				</Server>
+			</InstallServers>
+			<SetAdapters Action="true">
+				<Adapter>
+					<AdapterName Type="Receive">Commerce Server Catalog</AdapterName>
+				</Adapter>
+			</SetAdapters>
+		</Host>
+		<!-- Send Host-->
+		<Host>
+			<HostName>SendCommerceCatalog</HostName>
+			<Type>InProcess</Type>
+			<NTGroup>BizTalk Application Users</NTGroup>
+			<AuthTrusted>false</AuthTrusted>
+			<InstallServers Action="true">
+				<Server>
+					<ServerName Start="false">SERVER_NAME</ServerName>
+					<UserName>SomeUserSomePassword</UserName>
+					<Password Prompt="true">SomeUserSomePassword</Password>
+				</Server>
+			</InstallServers>
+			<SetAdapters Action="true">
+				<Adapter>
+					<AdapterName Type="Send">Commerce Server Catalog</AdapterName>
+				</Adapter>
+			</SetAdapters>
+		</Host>
+	</MakeHosts>
+</BizTalkHostConfig>
